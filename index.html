@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="zyphon plans.css">
+  </head>
+  <body>
+    <section id="aim" class="fade-in">
+  <h2>Our Aim</h2>
+  <p>
+    Zyphon aims to design and develop future-focused technologies that improve
+    human life and expand technological possibilities on Earth and beyond.
+    We are committed to building innovative, accessible, and responsible
+    solutions for everyone.
+  </p>
+</section>
+<section id="what-we-do" class="fade-in">
+  <h2>What We Do</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Artificial Intelligence</h3>
+      <p>
+        Developing intelligent systems, automation tools, and data-driven
+        solutions that enhance efficiency and decision-making.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Software Development</h3>
+      <p>
+        Building scalable software applications, platforms, and digital
+        infrastructure for individuals and organizations.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Space & Advanced Technology</h3>
+      <p>
+        Researching space-related technologies, simulations, and future
+        innovations that support exploration and communication.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Technology Research</h3>
+      <p>
+        Exploring emerging technologies and transforming ideas into
+        future-ready solutions through Zyphon Tech Labs.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section id="goal" class="fade-in">
+  <h2>Our Goal</h2>
+  <p>
+    Zyphon’s goal is to become a globally recognized technology company that
+    drives innovation, empowers future engineers, and contributes to
+    scientific and technological progress for humanity.
+  </p>
+</section>
+
+
+
+<footer>
+  © 2025 Zyphon — Founder Portfolio
+</footer>
+
+<script>
+  // Select all cards on the page
+  const cards = document.querySelectorAll('.card');
+
+  // Loop through each card
+  cards.forEach(card => {
+    // When mouse enters a card
+    card.addEventListener('mouseenter', () => {
+      card.style.boxShadow = "0 0 40px rgba(0,234,255,0.8)";
+      card.style.transform = "translateY(-10px)";
+    });
+
+    // When mouse leaves the card
+    card.addEventListener('mouseleave', () => {
+      card.style.boxShadow = "0 0 30px rgba(0,234,255,0.4)";
+      card.style.transform = "translateY(0)";
+    });
+  });
+</script>
+
+
+<script>
+  const tiltCards = document.querySelectorAll('.card');
+
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * 10;
+      const rotateY = ((x - centerX) / centerX) * 10;
+
+      card.style.transform = `rotateX(${ -rotateX }deg) rotateY(${ rotateY }deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = "rotateX(0deg) rotateY(0deg) translateY(0)";
+    });
+  });
+</script>
+
+</body>
+</html>

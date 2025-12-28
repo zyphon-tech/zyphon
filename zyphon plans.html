@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zyphon | Founder Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="zyphon plans.css">
+  
+
+</head>
+
+<body>
+<div>
+  <a href="index.html">Home</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="#divisions">Divisions</a>
+  <a href="#contact">Contact</a>
+  <a href="zyphon careers.html">Careers</a>
+
+</div>
+
+<nav>
+  <div class="logo">
+    <span>ZYPHON</span>
+  </div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+  </div>
+</nav>
+
+<section style="margin-top:80px;">
+  <h2>Founder Portfolio</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>👨‍🚀 Founder</h3>
+      <p>
+        I am the founder of Zyphon — a future-focused company exploring
+        artificial intelligence, software engineering, and space technology.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🛠 Skills</h3>
+      <p>
+        • HTML & CSS<br>
+        • JavaScript (learning)<br>
+        • Web Design<br>
+        • AI & Space Tech (future focus)
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📂 Projects</h3>
+      <p>
+        • Zyphon Official Website<br>
+        • School & Personal Projects<br>
+        • Future AI & Software Tools
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Vision</h3>
+      <p>
+        Building technology that empowers people, advances humanity,
+        and pushes beyond Earth.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="fade-in">
+
+<section id="divisions" class="fade-in">
+
+
+  
+<footer>
+  © 2025 Zyphon — Founder Portfolio
+</footer>
+
+<canvas id="particles"></canvas>
+<script>
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const particlesArray = [];
+const numParticles = 100;
+
+class Particle {
+  constructor(){
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.radius = Math.random() * 2 + 1;
+    this.speedX = (Math.random() - 0.5) * 0.5;
+    this.speedY = (Math.random() - 0.5) * 0.5;
+  }
+  update(){
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if(this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if(this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+  }
+  draw(){
+    ctx.fillStyle = 'white';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+    ctx.fill();
+  }
+}
+
+for(let i=0;i<numParticles;i++){
+  particlesArray.push(new Particle());
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particlesArray.forEach(p => { p.update(); p.draw(); });
+  requestAnimationFrame(animate);
+}
+
+animate();
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>

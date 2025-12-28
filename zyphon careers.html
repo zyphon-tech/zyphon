@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Careers | Zyphon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="zyphon plans.css">
+  <a href="careers.html">Careers</a>
+
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <span>ZYPHON</span>
+  </div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="zyphon plans.html">zyphon</a>
+
+  </div>
+</nav>
+
+<section style="margin-top:80px;" class="fade-in">
+  <h2>Join Zyphon</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🚀 Why Zyphon?</h3>
+      <p>
+        Zyphon is building future-focused technology in AI, software,
+        and space innovation. We value creativity, curiosity, and ambition.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💡 Who We’re Looking For</h3>
+      <p>
+        • Developers<br>
+        • Designers<br>
+        • AI Researchers<br>
+        • Space & Tech Enthusiasts<br>
+        • Students & Innovators
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌍 Our Culture</h3>
+      <p>
+        Learning-driven, future-oriented, inclusive, and focused on
+        solving big problems for humanity.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📩 How to Join</h3>
+      <p>
+        Opportunities will be announced soon.<br>
+        For now, build skills, explore ideas,
+        and prepare for the future with Zyphon.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="fade-in" style="margin-top:80px;">
+  <h2>Join Zyphon</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Why Join Zyphon?</h3>
+      <p>
+        Zyphon is a future-focused technology company driven by innovation,
+        learning, and ambition. We encourage creativity, curiosity,
+        and problem-solving.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Who Can Join</h3>
+      <p>
+        Students, innovators, and professionals with a strong interest in
+        technology, AI, software, or space science are welcome.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Requirements</h3>
+      <p>
+        • Interest in technology and innovation<br>
+        • Willingness to learn and grow<br>
+        • Basic or developing technical skills<br>
+        • Teamwork and collaboration<br>
+        • Ethical responsibility
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Our Culture</h3>
+      <p>
+        We value innovation, integrity, collaboration, excellence,
+        and future-oriented thinking.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer>
+  © 2025 Zyphon. All rights reserved.
+</footer>
+<script>
+  const links = document.querySelectorAll('nav a');
+
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault(); // Prevent default jump
+      const href = link.getAttribute('href');
+
+      if(href.startsWith('#')) {
+        const section = document.querySelector(href);
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
